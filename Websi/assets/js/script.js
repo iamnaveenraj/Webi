@@ -384,3 +384,17 @@ form.addEventListener("submit", async (e) => {
     form.reset();
 
 });
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+});
+
+// Close menu after clicking a page
+document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", function () {
+        navMenu.classList.remove("active");
+    });
+});

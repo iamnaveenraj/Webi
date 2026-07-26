@@ -1553,3 +1553,90 @@ grid-template-columns:1fr;
     color:#b8860b;
 
 }
+
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span{
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: .3s;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #111;
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Hide hamburger on desktop */
+.hamburger{
+    display:none;
+}
+
+@media (max-width:768px){
+
+    .hamburger{
+        display:block;
+        font-size:30px;
+        color:#fff;
+        cursor:pointer;
+        position:absolute;
+        right:20px;
+        top:20px;
+        z-index:1001;
+    }
+
+    #navMenu{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#111;
+    }
+
+    #navMenu.active{
+        display:block;
+    }
+
+    #navMenu ul{
+        list-style:none;
+        margin:0;
+        padding:0;
+    }
+
+    #navMenu li{
+        border-bottom:1px solid #333;
+    }
+
+    #navMenu a{
+        display:block;
+        color:white;
+        text-decoration:none;
+        padding:18px;
+        text-align:center;
+        font-size:18px;
+    }
+
+    #navMenu a:hover{
+        background:#222;
+    }
+}
