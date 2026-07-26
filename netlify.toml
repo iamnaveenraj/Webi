@@ -1,0 +1,5 @@
+[build]
+  publish = "Websi"
+
+[dev]
+  publish = "Websi"
