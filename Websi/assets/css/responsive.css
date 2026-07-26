@@ -1,0 +1,365 @@
+/* ===========================================
+   Responsive CSS
+   Mobile First
+=========================================== */
+
+/* -----------------------------
+   Large Desktop
+------------------------------ */
+
+@media (max-width:1400px){
+
+    .hero h1{
+        font-size:64px;
+    }
+
+    section h2{
+        font-size:42px;
+    }
+
+}
+
+/* -----------------------------
+   Laptop
+------------------------------ */
+
+@media (max-width:1200px){
+
+    .container{
+        width:92%;
+    }
+
+    .hero h1{
+        font-size:58px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* -----------------------------
+   Tablet
+------------------------------ */
+
+@media (max-width:992px){
+
+    .navbar .container{
+        padding:16px 0;
+    }
+
+    .logo h2{
+        font-size:30px;
+    }
+
+    nav ul{
+        gap:22px;
+    }
+
+    .hero{
+        height:auto;
+        min-height:100vh;
+        padding:140px 0 80px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .watermark{
+        display:none;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    section{
+        padding:80px 0;
+    }
+
+}
+
+/* -----------------------------
+   Mobile
+------------------------------ */
+
+@media (max-width:768px){
+
+    .navbar .container{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero-content{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        max-width:100%;
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    section h2{
+        font-size:36px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:28px;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .about-preview img{
+        max-width:100%;
+    }
+
+}
+
+/* -----------------------------
+   Small Mobile
+------------------------------ */
+
+@media (max-width:576px){
+
+    .logo h2{
+        font-size:26px;
+    }
+
+    .label{
+        font-size:13px;
+        padding:8px 14px;
+    }
+
+    .hero h1{
+        font-size:34px;
+        line-height:1.2;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    section{
+        padding:60px 0;
+    }
+
+    section h2{
+        font-size:30px;
+    }
+
+    .section-title{
+        font-size:13px;
+    }
+
+    .card{
+        padding:22px;
+    }
+
+    .card h3{
+        font-size:22px;
+    }
+
+    footer{
+        padding:35px 20px;
+    }
+
+    footer h3{
+        font-size:26px;
+    }
+
+}
+
+/* -----------------------------
+   Extra Small Devices
+------------------------------ */
+
+@media (max-width:420px){
+
+    .container{
+        width:94%;
+    }
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .btn{
+        padding:14px 20px;
+        font-size:14px;
+    }
+
+    nav ul{
+        gap:10px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+}
+
+/* -----------------------------
+   Ultra Wide Screens
+------------------------------ */
+
+@media (min-width:1600px){
+
+    .container{
+        max-width:1450px;
+    }
+
+    .hero h1{
+        font-size:88px;
+    }
+
+    .hero p{
+        font-size:24px;
+        max-width:700px;
+    }
+
+    section h2{
+        font-size:60px;
+    }
+
+    .cards{
+        gap:40px;
+    }
+
+}
+
+/* ================================
+   ABOUT PAGE
+================================ */
+
+@media(max-width:992px){
+
+    .about-hero h1{
+        font-size:56px;
+    }
+
+    .quote h2{
+        font-size:30px;
+    }
+
+    .chapter{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .number{
+        font-size:42px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .about-hero{
+        padding:150px 0 80px;
+    }
+
+    .about-hero h1{
+        font-size:42px;
+    }
+
+    .about-hero p{
+        font-size:16px;
+    }
+
+    .feature-image img{
+        height:420px;
+    }
+
+    .quote{
+        padding:25px;
+    }
+
+    .quote h2{
+        font-size:24px;
+    }
+
+    .chapter h2{
+        font-size:32px;
+    }
+
+    .chapter p{
+        font-size:16px;
+    }
+
+    .closing-image img{
+        height:350px;
+    }
+
+}
+
+/* ===========================
+CONTACT PAGE
+=========================== */
+
+@media(max-width:768px){
+
+.contact-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+.contact-info h2,
+
+.contact-form h2{
+
+font-size:32px;
+
+}
+
+}
