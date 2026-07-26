@@ -1464,153 +1464,34 @@ grid-template-columns:1fr;
 }
 
 
-.contact-map{
+/* Mobile Navigation */
 
-    margin-top:35px;
-
-    border-radius:15px;
-
-    overflow:hidden;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
-
-}
-
-.contact-map iframe{
-
-    width:100%;
-
-    height:250px;
-
-    border:0;
-
-}
-
-.info-item{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:18px;
-
-    margin:25px 0;
-
-}
-
-.info-item i{
-
-    width:55px;
-
-    height:55px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:#b8860b;
-
-    color:#fff;
-
-    font-size:22px;
-
-    flex-shrink:0;
-
-}
-
-.info-item h4{
-
-    margin-bottom:6px;
-
-    color:#222;
-
-}
-
-.info-item p{
-
-    margin:0;
-
-    color:#666;
-
-}
-
-.info-item a{
-
-    color:#666;
-
-    text-decoration:none;
-
-    transition:.3s;
-
-}
-
-.info-item a:hover{
-
-    color:#b8860b;
-
-}
-
-
-.hamburger{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.hamburger span{
-    width: 28px;
-    height: 3px;
-    background: #fff;
-    border-radius: 3px;
-    transition: .3s;
-}
-
-.navbar{
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background: #111;
-}
-
-.navbar .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-/* Hide hamburger on desktop */
 .hamburger{
     display:none;
+    font-size:32px;
+    color:#fff;
+    cursor:pointer;
+    z-index:10001;
 }
 
-@media (max-width:768px){
+@media screen and (max-width:768px){
 
     .hamburger{
         display:block;
-        font-size:30px;
-        color:#fff;
-        cursor:pointer;
         position:absolute;
         right:20px;
-        top:20px;
-        z-index:1001;
+        top:50%;
+        transform:translateY(-50%);
     }
 
     #navMenu{
         display:none;
         position:absolute;
-        top:70px;
+        top:75px;
         left:0;
         width:100%;
         background:#111;
+        box-shadow:0 10px 30px rgba(0,0,0,.3);
     }
 
     #navMenu.active{
@@ -1618,25 +1499,97 @@ grid-template-columns:1fr;
     }
 
     #navMenu ul{
-        list-style:none;
-        margin:0;
-        padding:0;
+        display:flex;
+        flex-direction:column;
+        gap:0;
     }
 
     #navMenu li{
-        border-bottom:1px solid #333;
+        border-bottom:1px solid rgba(255,255,255,.1);
     }
 
     #navMenu a{
         display:block;
-        color:white;
-        text-decoration:none;
         padding:18px;
-        text-align:center;
+        color:#fff;
         font-size:18px;
+        text-align:center;
     }
 
     #navMenu a:hover{
-        background:#222;
+        background:#d4af37;
+        color:#111;
+    }
+
+}
+
+
+/* Desktop */
+.mobile-menu-btn{
+    display:none;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .mobile-menu-btn{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:45px;
+        height:45px;
+        position:absolute;
+        right:20px;
+        top:50%;
+        transform:translateY(-50%);
+        cursor:pointer;
+        color:#fff;
+        font-size:26px;
+        z-index:10002;
+    }
+
+    #navMenu{
+        position:fixed;
+        top:0;
+        left:-100%;
+        width:100%;
+        height:100vh;
+        background:#111;
+        transition:.4s ease;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        z-index:10001;
+    }
+
+    #navMenu.active{
+        left:0;
+    }
+
+    #navMenu ul{
+        display:flex;
+        flex-direction:column;
+        gap:30px;
+        text-align:center;
+    }
+
+    #navMenu a{
+        color:#fff;
+        font-size:28px;
+        font-weight:600;
+        transition:.3s;
+    }
+
+    #navMenu a:hover{
+        color:#d4af37;
+    }
+
+    /* Hide desktop navigation */
+    .navbar nav ul{
+        display:none;
+    }
+
+    #navMenu.active ul{
+        display:flex;
     }
 }
