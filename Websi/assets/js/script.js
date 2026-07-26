@@ -364,3 +364,23 @@ scrollBtn.addEventListener("click", function () {
 
 });
  
+
+
+const form = document.getElementById("bookingForm");
+
+form.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    await fetch(form.action, {
+        method: "POST",
+        body: formData
+    });
+
+    alert("✅ Thank you! Your booking request has been submitted.");
+
+    form.reset();
+
+});
